@@ -84,7 +84,7 @@ body { font-size: 30px; line-height: 1.4; color: #333333; font-family: "Helvetic
 .menu .catalog__item a:hover { text-decoration: none; }
 .menu .catalog__item_or a { color: #ffa200; }
 .menu .menu__list { position: absolute; left: 766px; font-size: 0; display: inline-block; }
-.menu .menu__item { padding-left: 80px; display: inline-block; }
+.menu .menu__item { padding-left: 80px; display: inline-block; font-family: "HelveticaNeue-Medium", Arial, sans-seriffont(HelveticaNeue-Roman, helveticaneuecyr-roman-webfont); }
 .menu .menu__item:first-child { padding-left: 0; }
 .menu .menu__item a { font-size: 34px; color: #0057b9; }
 .menu .menu__item a:hover { text-decoration: none; }
