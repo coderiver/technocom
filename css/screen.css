@@ -19,7 +19,91 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
+@font-face { font-family: HelveticaNeue-Roman; src: url("fonts/helveticaneuecyr-roman-webfont.eot"); src: url("fonts/helveticaneuecyr-roman-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/helveticaneuecyr-roman-webfont.woff") format("woff"), url("fonts/helveticaneuecyr-roman-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: HelveticaNeue-Bold; src: url("fonts/helveticaneuecyr-bold-webfont.eot"); src: url("fonts/helveticaneuecyr-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/helveticaneuecyr-bold-webfont.woff") format("woff"), url("fonts/helveticaneuecyr-bold-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: HelveticaNeue-Light; src: url("fonts/helveticaneuecyr-light-webfont.eot"); src: url("fonts/helveticaneuecyr-light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/helveticaneuecyr-light-webfont.woff") format("woff"), url("fonts/helveticaneuecyr-light-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: HelveticaNeue-Medium; src: url("fonts/helveticaneuecyr-medium-webfont.eot"); src: url("fonts/helveticaneuecyr-medium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/helveticaneuecyr-medium-webfont.woff") format("woff"), url("fonts/helveticaneuecyr-medium-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+body { font-size: 30px; line-height: 1.4; color: #333333; font-family: "HelveticaNeue-Roman", Arial, sans-serif; }
+
+.out { margin: 0 auto; width: 2560px; }
+
+.header { padding: 70px 85px 6px 95px; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; *zoom: 1; }
+.header:after { content: " "; display: table; clear: both; }
+.header .logo { float: left; display: block; background: url('../img/icons-seb045643b9.png') 0 0 no-repeat; width: 590px; height: 75px; }
+.header .header__left { float: left; margin-left: 140px; }
+.header .header__center { float: left; margin-left: 110px; }
+.header .header__address, .header .header__phone, .header .online-assist, .header .callback, .header .skype, .header .user__link_basket, .header .user__link_mail { position: relative; margin-bottom: 18px; padding-left: 70px; }
+.header .header__address:before, .header .header__address .online-assist__pic, .header .header__address .callback__pic, .header .header__address .skype__pic, .header .header__phone:before, .header .header__phone .online-assist__pic, .header .header__phone .callback__pic, .header .header__phone .skype__pic, .header .online-assist:before, .header .online-assist .online-assist__pic, .header .online-assist .callback__pic, .header .online-assist .skype__pic, .header .callback:before, .header .callback .online-assist__pic, .header .callback .callback__pic, .header .callback .skype__pic, .header .skype:before, .header .skype .online-assist__pic, .header .skype .callback__pic, .header .skype .skype__pic, .header .user__link_basket:before, .header .user__link_basket .online-assist__pic, .header .user__link_basket .callback__pic, .header .user__link_basket .skype__pic, .header .user__link_mail:before, .header .user__link_mail .online-assist__pic, .header .user__link_mail .callback__pic, .header .user__link_mail .skype__pic { position: absolute; content: ""; top: 0; left: 0; }
+.header .online-assist, .header .callback, .header .skype { line-height: 1.65; cursor: pointer; text-decoration: underline; }
+.header .online-assist:hover, .header .callback:hover, .header .skype:hover { text-decoration: none; }
+.header .online-assist { color: #16a433; }
+.header .callback { color: #0057b9; font-family: "HelveticaNeue-Bold", Arial, sans-seriffont(HelveticaNeue-Roman, helveticaneuecyr-roman-webfont); }
+.header .skype { color: #00aaf1; }
+.header .header__address { margin-bottom: 24px; font-size: 36px; line-height: 1.2; font-family: "HelveticaNeue-Medium", Arial, sans-seriffont(HelveticaNeue-Roman, helveticaneuecyr-roman-webfont); }
+.header .header__address:before { background: url('../img/icons-seb045643b9.png') 0 -191px no-repeat; width: 44px; height: 76px; }
+.header .header__address p, .header .header__address a { font-size: 24px; font-family: "HelveticaNeue-Roman", Arial, sans-serif; }
+.header .header__address a { color: #999999; }
+.header .header__address a:hover { text-decoration: none; }
+.header .header__phone { font-family: "HelveticaNeue-Medium", Arial, sans-seriffont(HelveticaNeue-Roman, helveticaneuecyr-roman-webfont); }
+.header .header__phone:before { background: url('../img/icons-seb045643b9.png') 0 -330px no-repeat; width: 43px; height: 43px; }
+.header .online-assist__pic { background: url('../img/icons-seb045643b9.png') 0 -85px no-repeat; width: 43px; height: 43px; }
+.header .callback__pic { background: url('../img/icons-seb045643b9.png') 0 -277px no-repeat; width: 43px; height: 43px; }
+.header .skype__pic { background: url('../img/icons-seb045643b9.png') 0 -138px no-repeat; width: 43px; height: 43px; }
+.header .header__right { float: right; line-height: 1.9; font-size: 24px; }
+.header .user__row { margin-bottom: 23px; }
+.header .user__row.user__row_mod { text-align: right; }
+.header .user__link { margin-left: 40px; color: #333333; cursor: pointer; text-decoration: none; }
+.header .user__link span { text-decoration: underline; }
+.header .user__link span:hover { text-decoration: none; }
+.header .user__link:first-child { margin-left: 0; }
+.header .user__link.user__link_pad { margin-left: 70px; }
+.header .user__link.user__link_grey { color: #999999; }
+.header .user__link.user__link_company { font-family: "HelveticaNeue-Medium", Arial, sans-seriffont(HelveticaNeue-Roman, helveticaneuecyr-roman-webfont); }
+.header .user__link_basket:before { top: -2px; background: url('../img/icons-seb045643b9.png') 0 -516px no-repeat; width: 46px; height: 37px; }
+.header .user__link_mail:before { top: -2px; background: url('../img/icons-seb045643b9.png') 0 -469px no-repeat; width: 38px; height: 37px; }
+
+.menu { padding: 0 0 0 128px; width: 100%; -webkit-box-shadow: 0 23px 35px rgba(0, 0, 1, 0.35); -moz-box-shadow: 0 23px 35px rgba(0, 0, 1, 0.35); box-shadow: 0 23px 35px rgba(0, 0, 1, 0.35); -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.menu .out { position: relative; }
+.menu .catalog { position: relative; padding: 0 80px; line-height: 106px; color: white; font-size: 48px; text-decoration: none; cursor: pointer; background: #0057b9; display: inline-block; }
+.menu .catalog:before { position: absolute; content: ""; left: -30px; top: 0; width: 0px; height: 0px; border-style: solid; border-width: 0 0 106px 30px; border-color: transparent transparent #0057b9 transparent; }
+.menu .catalog:after { position: absolute; content: ""; right: -30px; top: 0; width: 0px; height: 0px; border-style: solid; border-width: 106px 30px 0 0; border-color: #0057b9 transparent transparent transparent; }
+.menu .catalog:hover .catalog__block { display: block !important; }
+.menu .catalog__block { position: absolute; top: 100%; left: -30px; width: 2379px; background: #0057b9; -webkit-box-shadow: 0 8px 8px rgba(0, 0, 1, 0.35); -moz-box-shadow: 0 8px 8px rgba(0, 0, 1, 0.35); box-shadow: 0 8px 8px rgba(0, 0, 1, 0.35); display: none; }
+.menu .catalog__top { padding: 20px 108px; line-height: 0; -webkit-box-shadow: 0 5px 5px rgba(0, 0, 1, 0.26); -moz-box-shadow: 0 5px 5px rgba(0, 0, 1, 0.26); box-shadow: 0 5px 5px rgba(0, 0, 1, 0.26); background: #014a9c; }
+.menu .catalog__search { position: relative; width: 748px; vertical-align: top; display: inline-block; }
+.menu .catalog__search:before { position: absolute; content: ""; left: 28px; top: 50%; margin-top: -18px; cursor: pointer; background: url('../img/icons-seb045643b9.png') 0 -413px no-repeat; width: 57px; height: 46px; }
+.menu .catalog__bottom { padding: 40px 105px 100px; font-size: 0; font-family: "HelveticaNeue-Medium", Arial, sans-seriffont(HelveticaNeue-Roman, helveticaneuecyr-roman-webfont); -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.menu .catalog__list { padding-left: 60px; width: 25%; vertical-align: top; display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.menu .catalog__list:first-child { padding-left: 0; }
+.menu .catalog__item { margin-top: 20px; line-height: 1.2; }
+.menu .catalog__item a { color: white; font-size: 32px; }
+.menu .catalog__item a:hover { text-decoration: none; }
+.menu .catalog__item_or a { color: #ffa200; }
+.menu .menu__list { position: absolute; left: 766px; font-size: 0; display: inline-block; }
+.menu .menu__item { padding-left: 80px; display: inline-block; }
+.menu .menu__item:first-child { padding-left: 0; }
+.menu .menu__item a { font-size: 34px; color: #0057b9; }
+.menu .menu__item a:hover { text-decoration: none; }
+
+.input { padding: 0 50px 0 112px; width: 100%; line-height: 78px; font-size: 30px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: "HelveticaNeue-Light", Arial, sans-serif; }
+.input:-moz-placeholder, .input::-moz-placeholder { color: #999999; opacity: 1; }
+.input::-webkit-input-placeholder { color: #999999; }
+.input:-ms-input-placeholder { font-style: italic; }
+.input:-moz-placeholder { font-style: italic; }
+.input::-moz-placeholder { font-style: italic; }
+.input::-webkit-input-placeholder { font-style: italic; }
+.input::placeholder { font-style: italic; }
+.input:focus:-ms-input-placeholder { font-size: 0; }
+.input:focus:-moz-placeholder { font-size: 0; }
+.input:focus::-moz-placeholder { font-size: 0; }
+.input:focus::-webkit-input-placeholder { font-size: 0; }
+.input:focus::placeholder { font-size: 0; }
+
+.btn { padding: 0 50px; color: white; line-height: 78px; font-size: 36px; text-decoration: none; display: inline-block; background: #468ad6; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
