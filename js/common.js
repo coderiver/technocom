@@ -7,5 +7,26 @@ head.ready(function() {
 		$(".js-popup").hide();
 	});
 
-	console.log($('body').html());
+	//slider
+	function slider() {
+		var el = $('.js-slider');
+		el.each(function(){
+			var el_in = $(this).find('.slider__list'),
+			el_item = $(this).find('.slider__item'),
+			el_prev = $(this).find('.slider__prev'),
+			el_next = $(this).find('.slider__next');
+			el_in.cycle({
+				fx: 'carousel',
+				timeout: 0,
+				carouselVisible: 4,
+				next: el_next,
+				prev: el_prev,
+				slides: el_item
+			});
+		})
+	}
+	slider();
+	
+
+
 });

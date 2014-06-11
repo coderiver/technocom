@@ -64,11 +64,13 @@ $blue: #00aaf1
 $orange: #ffa200
 
 body
+	+hnr
 	font-size: 30px 
 	line-height: 1.4
 	color: $grey 
-	+hnr
 
+a
+	color: $dark-blue 
 
 // common blocks   
 .out
@@ -76,6 +78,7 @@ body
 	width: 2560px
 
 .header
+	position: relative
 	padding: 70px 85px 6px 95px 
 	width: 100%
 	+box
@@ -193,10 +196,12 @@ body
 
 //menu
 .menu
+	position: relative
 	padding: 0 0 0 128px 
 	width: 100%
 	+box-shadow(0 23px 35px rgba(0,0,1,.35))
 	+box
+	z-index: 20 
 	.out
 		position: relative
 	.menu__catalog
@@ -326,3 +331,54 @@ body
 	text-decoration: none 
 	display: inline-block
 	background: #468AD6 
+	&.btn_small
+		padding: 0 20px
+		line-height: 52px
+		font-size: 32px
+	&.btn_green
+		background: #04ab00 
+	
+//title
+.title-line
+	height: 40px
+	margin-bottom: 80px
+	border-bottom: 1px solid #a8a8a8
+	text-align: center
+	span
+		display: inline-block
+		padding: 0 160px
+		background: #fff
+		+hnm
+		font-size: 60px
+
+.title-bg
+	padding: 25px 140px
+	background: #e8e8e8 
+	+hnm
+	font-size: 48px
+
+//slider
+.slider
+	position: relative
+	padding: 0 100px
+	.slider__item
+		width: 590px
+		padding: 80px 0
+		white-space: normal
+	.slider__prev, .slider__next
+		position: absolute
+		top: 50%
+	.slider__prev
+		left: 25px
+		+s(arr-left)
+	.slider__next
+		right: 25px
+		+s(arr-right)
+
+
+
+
+
+
+
+
