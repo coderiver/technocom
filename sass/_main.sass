@@ -20,8 +20,6 @@
 			+hnb
 			font-size: 72px
 			color: #FFF 
-			&:hover
-				text-decoration: none
 	.main-slider__text
 		+hnl
 		font-size: 39px
@@ -108,11 +106,133 @@
 			max-width: 100%
 			vertical-align: middle
 
-
-
-
-
-
+//map
+.map
+	position: relative
+	height: 1570px 
+	background: url(../img/map-bg.jpg) 
+	overflow: hidden
+	&.is-animated
+		.map__object
+			opacity: 1 
+		.map__title, .map__filial, .map__from, .map__to, .map__text, .map__catalog, .map__propositions
+			+transform(translateY(0px))
+		.map__russia
+			+scale(1)
+		.map__from, .map__to
+			+transform(translateY(0px))
+	.map__object
+		position: absolute
+		opacity: 0 
+		+tr(all .2s linear)
+	.map__title, .map__filial, .map__from, .map__to, .map__text, .map__catalog, .map__propositions
+		+transform(translateY(100px))
+	.map__title
+		top: 130px
+		left: 0
+		right: 0
+		+hnm
+		font-size: 60px
+		text-align: center
+	.map__filial
+		top: 250px
+		left: 0
+		right: 0
+		text-align: center
+		+hnl
+		font-size: 48px  
+		+transition-delay(.2s)
+	.map__russia
+		top: 380px
+		left: 615px
+		width: 1335px
+		height: 769px 
+		background: url(../img/map-russia.png)
+		+scale(.7) 
+		+transition-delay(.4s) 
+	.map__light
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: url(../img/map-light.jpg) 
+		+transition-delay(.6s) 
+	.map__from, .map__to
+		+hnm
+		font-size: 48px
+		color: $dark-blue 
+	.map__from
+		top: 450px
+		left: 240px
+		+transition-delay(.8s) 
+	.map__to
+		top: 1110px
+		left: 1830px 
+		+transition-delay(1s) 
+	.map__text_1
+		top: 665px
+		left: 150px  
+		+transition-delay(1.2s) 
+	.map__text_2
+		top: 880px
+		left: 105px 
+		+transition-delay(1.4s) 
+	.map__text_3
+		top: 1045px
+		left: 385px 
+		+transition-delay(1.6s) 
+	.map__text_4
+		top: 1160px
+		left: 1075px 
+		+transition-delay(1.8s)  
+	.map__text_5
+		top: 860px
+		left: 2035px 
+		+transition-delay(2s)  
+	.map__text_6
+		top: 565px
+		left: 1995px 
+		+transition-delay(2.2s)  
+	.map__catalog
+		left: 0
+		right: 0
+		top: 1325px
+		text-align: center
+		+transition-delay(2.4s)  
+		a
+			position: relative
+			display: inline-block
+			height: 106px
+			padding: 0 80px
+			background: $dark-blue 
+			font-size: 48px
+			text-decoration: none
+			color: #FFF 
+			line-height: 106px
+			&:before, &:after
+				content: ""
+				position: absolute
+				top: 0
+				width: 0px
+				height: 0px
+				border-style: solid
+			&:before
+				left: -30px
+				border-width: 0 0 106px 30px
+				border-color: transparent transparent #0057b9 transparent
+			&:after
+				right: -30px
+				border-width: 106px 30px 0 0
+				border-color: #0057b9 transparent transparent transparent
+	.map__propositions
+		top: 1470px
+		left: 0
+		right: 0
+		text-align: center
+		font-size: 36px
+		font-style: italic
+		color: #666 
+		+transition-delay(2.6s)  
 
 
 

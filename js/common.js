@@ -27,6 +27,16 @@ head.ready(function() {
 	}
 	slider();
 	
+	//window scroll
+	$(window).scroll(function(){
+		var offset_top = $(document).scrollTop(),
+				map = $('.map'),
+				map_top = map.offset().top;
+		if (offset_top > map_top) {
+			map.addClass('is-animated');
+		};
+	});
+
 
 
 });
